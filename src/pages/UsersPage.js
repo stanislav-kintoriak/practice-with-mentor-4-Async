@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAll } from 'redux/users/operations';
 import { Link } from 'react-router-dom';
-import { selectUsers } from 'redux/users/selectors';
+import { selectUsers } from '../redux/users/selectors';
 
 export const UsersPage = () => {
   const users = useSelector(selectUsers);

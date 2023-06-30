@@ -10,7 +10,7 @@ export const fetchAll = createAsyncThunk(
       const { data } = await axios.get('/users');
       return data;
     } catch (error) {
-      return rejectWithValue(error);
+      return rejectWithValue(error.message);
     }
   }
 );
@@ -23,7 +23,7 @@ export const fetchOne = createAsyncThunk(
         const { data } = await axios.get(`/users/${id}`);
         return data;
       } catch (error) {
-        return rejectWithValue(error);
+        return rejectWithValue(error.message);
       }
     }
   );
